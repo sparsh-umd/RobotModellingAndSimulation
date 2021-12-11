@@ -12,3 +12,13 @@ Instructions to run the package:
         1) Source the bash file of the package
     4) roslaunch robot template_launch.launch
         1) Setup gazebo world & spawn the robot.
+
+4) Scripts Description (src/robot/scripts):
+    1) arm_control.py
+        1) Script to move the arm.
+    2) teleop.py
+        1) Script to move the mobile robot
+    3) forward_kinematics_transform.py
+        1) Script to validate forward kinematics
+    4) inverse_kinematics.py
+        1) Script to validate inverse kinematics
