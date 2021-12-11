@@ -1,0 +1,8 @@
+prefix=/home/sparsh/catkin_ws/devel
+
+Name: robot
+Description: Description of robot
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,80 @@
+robot:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  
+  gazebo_ros_control:
+    pid_gains:
+      front_left_steering_block_joint:
+        p: 110.0
+        i: 10.0
+        d: 10.0
+      front_right_steering_block_joint:
+        p: 110.0
+        i: 10.0
+        d: 10.0
+      rear_axle_joint:
+        p: 110.0
+        i: 10.0
+        d: 10.0
+      arm_base_joint:
+        p: 50.0
+        i: 10.0
+        d: 10.0
+      arm_middle_joint:
+        p: 50.0
+        i: 10.0
+        d: 10.0
+      arm_end_joint:
+        p: 50.0
+        i: 10.0
+        d: 10.0
+      left_end_eff_joint:
+        p: 20.0
+        i: 10.0
+        d: 10.0
+      right_end_eff_joint:
+        p: 20.0
+        i: 10.0
+        d: 10.0
+  
+  front_left_steering_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_left_steering_block_joint
+    pid: {p: 110.0, i: 10.0, d: 10.0}
+  
+  front_right_steering_controller:
+    type: effort_controllers/JointPositionController
+    joint: front_right_steering_block_joint
+    pid: {p: 110.0, i: 10.0, d: 10.0}
+
+  rear_axle_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: rear_axle_joint
+    pid: {p: 110.0, i: 10.0, d: 10.0}
+
+  arm_base_controller:
+    type: effort_controllers/JointPositionController
+    joint: arm_base_joint
+    pid: {p: 50.0, i: 10.0, d: 10.0}
+
+  arm_middle_controller:
+    type: effort_controllers/JointPositionController
+    joint: arm_middle_joint
+    pid: {p: 50.0, i: 10.0, d: 10.0}
+
+  arm_end_controller:
+    type: effort_controllers/JointPositionController
+    joint: arm_end_joint
+    pid: {p: 50.0, i: 10.0, d: 10.0}
+
+  left_end_eff_controller:
+    type: effort_controllers/JointPositionController
+    joint: left_end_eff_joint
+    pid: {p: 50.0, i: 10.0, d: 10.0}
+  
+  right_end_eff_controller:
+    type: effort_controllers/JointPositionController
+    joint: right_end_eff_joint
+    pid: {p: 50.0, i: 10.0, d: 10.0}
+ 
